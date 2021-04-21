@@ -1,16 +1,12 @@
 import css from './stylesheet.css';
 
-import { dropDown, dropUp } from './dropDown.js';
+import { dropDown } from './dropDown.js';
 
 const pageFunctionality = () => {
 	const menu = document.getElementById('menuButton');
 
-	menu.addEventListener('mouseover', () => {
+	menu.addEventListener('click', () => {
 		dropDown();
-	});
-
-	menu.addEventListener('mouseout', () => {
-		dropUp();
 	});
 };
 pageFunctionality();

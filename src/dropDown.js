@@ -1,21 +1,14 @@
 const dropDown = () => {
-	const item1 = document.getElementById('item1');
-	const item2 = document.getElementById('item2');
-	const item3 = document.getElementById('item3');
+	const menuItems = document.getElementById('menuItems');
 
-	item1.style.opacity = '100';
-	item2.style.opacity = '100';
-	item3.style.opacity = '100';
+	if (
+		menuItems.className.match('invisible') ||
+		menuItems.className.match('startingVisibility')
+	) {
+		menuItems.className = 'visible';
+	} else {
+		menuItems.className = 'invisible';
+	}
 };
 
-const dropUp = () => {
-	const item1 = document.getElementById('item1');
-	const item2 = document.getElementById('item2');
-	const item3 = document.getElementById('item3');
-
-	item1.style.opacity = '0';
-	item2.style.opacity = '0';
-	item3.style.opacity = '0';
-};
-
-export { dropDown, dropUp };
+export { dropDown };
